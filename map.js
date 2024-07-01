@@ -1,10 +1,10 @@
 import "./style.css";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
-//-58.7397,-34.69,-58.6396,-34.59
+
 var southWest = L.latLng(-34.69, -58.7397),
   northEast = L.latLng(-34.59, -58.6396);
-//-58.79197,-34.58630
+
 var maxBoundArea = L.latLngBounds(southWest, northEast);
 
 var map = L.map("map", {
@@ -42,10 +42,14 @@ let btnIndustrias = document.getElementById("btn-industrias");
 
 btnComercios.addEventListener("click", () => {
   clearMarkers();
-  fetch("http://localhost:3000/normalizaciones")
+  // fetch("http://localhost:3000/normalizaciones")
+  fetch(
+    "https://raw.githubusercontent.com/santiagoarielv98/crui-prueba_mapa/main/db.json"
+  )
     .then((response) => response.json())
     .then((data) => {
-      data.forEach((comercio) => {
+      // data.forEach((comercio) => {
+      data.normalizaciones.forEach((comercio) => {
         L.marker([comercio.location.lat, comercio.location.lon])
           .addTo(map)
           .bindPopup(
@@ -57,10 +61,14 @@ btnComercios.addEventListener("click", () => {
 
 btnIndustrias.addEventListener("click", () => {
   clearMarkers();
-  fetch("http://localhost:3000/industries")
+  // fetch("http://localhost:3000/industries")
+  fetch(
+    "https://raw.githubusercontent.com/santiagoarielv98/crui-prueba_mapa/main/db.json"
+  )
     .then((response) => response.json())
     .then((data) => {
-      data.forEach((industria) => {
+      // data.forEach((industria) => {
+      data.industries.forEach((industria) => {
         L.marker([
           industria.map.coordinates.latitude,
           industria.map.coordinates.longitude,
