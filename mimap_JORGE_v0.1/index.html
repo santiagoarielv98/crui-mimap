@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Municipalidad de Ituzaingó - Comercios e Industrias</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAiAfrI7vZ23GeDa8IO_-znyc4xYvWJdhM"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <!-- Copia del encabezado del sitio institucional -->
+    </header>
+    <main>
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Ingrese nombre, dirección o rubro que desea buscar">
+            <button id="search-button">Buscar</button>
+        </div>
+        <div id="sidebar" class="hidden"></div> <!-- Menú lateral inicialmente oculto -->
+        <div class="prefilters">
+            <button class="filter-button" data-filter="COMERCIOS">COMERCIOS</button>
+            <button class="filter-button" data-filter="INDUSTRIAS">INDUSTRIAS</button>
+            <button class="filter-button" data-filter="CAMPAÑAS ESPECIALES">CAMPAÑAS ESPECIALES</button>
+        </div>
+        <div id="map"></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

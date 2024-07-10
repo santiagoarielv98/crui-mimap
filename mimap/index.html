@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <script type="module" crossorigin src="/mimap_SANTIAGO_v0.14d/assets/index-DnXPzcGB.js"></script>
+    <link rel="stylesheet" crossorigin href="/mimap_SANTIAGO_v0.14d/assets/index-BDsxYmb5.css">
+  </head>
+  <body>
+    <div class="d-flex flex-column h-100">
+      <header class="p-3 text-bg-dark">
+        <div class="container-fluid">
+          <form
+            class="d-inline-flex"
+            role="search"
+            onsubmit="return false"
+            id="form"
+          >
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              id="search"
+            />
+            <!-- <button
+              class="btn btn-outline-success"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#sidebar"
+            >
+              <i class="bi-filter"></i>
+            </button> -->
+            <div>
+              <div class="dropdown">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-toggle="dropdown"
+                  data-bs-auto-close="outside"
+                >
+                  <i class="bi bi-filter"></i>
+                </button>
+                <div
+                  class="dropdown-menu p-2 overflow-y-auto"
+                  style="height: 350px"
+                  id="filters"
+                ></div>
+              </div>
+            </div>
+            <div class="d-inline-flex align-items-center ms-4">
+              <small style="text-wrap: nowrap">MIMAP v0.14 draft</small>
+            </div>
+          </form>
+        </div>
+      </header>
+      <div class="d-flex h-100 flex-fill overflow-hidden">
+        <div
+          id="sidebar"
+          class="collapse collapse-horizontal z-1 position-relative"
+        >
+          <aside
+            class="d-flex align-items-stretch flex-shrink-0 bg-white h-100 overflow-hidden position-relative"
+            style="width: 380px"
+          >
+            <div
+              id="results"
+              class="list-group list-group-flush border-bottom scrollarea overflow-y-auto h-100"
+            >
+              <!-- idea santiago -->
+              <!--  <a class="list-group-item py-3 lh-tight">
+                <div
+                  class="d-flex w-100 align-items-center justify-content-between"
+                >
+                  <strong class="mb-1">Bienvenido a MIMAP</strong>
+                  <small class="text-muted">v 0.0draft</small>
+                </div>
+                <div class="col-10 mb-1 small">Que deseas ver en el mapa?</div>
+              </a>
+              <a
+                href="#"
+                class="list-group-item list-group-item-action py-3 lh-tight d-flex gap-3"
+              >
+                <div class="d-inline-flex align-items-center">
+                  <i class="bi bi-shop" style="font-size: 24px"></i>
+                </div>
+                <div>
+                  <p class="mb-1">Comercios e Industrias</p>
+                  <div class="col-10 mb-1 small">
+                    Encuentra comercios e industrias en Ituzaingo
+                  </div>
+                </div>
+              </a>
+              <a
+                href="#"
+                class="list-group-item list-group-item-action py-3 lh-tight d-flex gap-3"
+              >
+                <div class="d-inline-flex align-items-center">
+                  <i class="bi bi-geo-alt" style="font-size: 24px"></i>
+                </div>
+                <div>
+                  <p class="mb-1">Campañas y Beneficios</p>
+                  <div class="col-10 mb-1 small">
+                    CAMPAÑAS DE ACOMPAÑAMIENTO AL COMERCIO LOCAL
+                  </div>
+                </div>
+              </a>
+              <a
+                href="#"
+                class="list-group-item list-group-item-action py-3 lh-tight d-flex gap-3"
+              >
+                <div class="d-inline-flex align-items-center">
+                  <i
+                    class="bi bi-box-arrow-up-right"
+                    style="font-size: 24px"
+                  ></i>
+                </div>
+                <div>
+                  <p class="mb-1">Ofertas Exportables</p>
+                  <div class="col-10 mb-1 small">
+                    Encuentra ofertas exportables en Ituzaingo
+                  </div>
+                </div>
+              </a> -->
+              <!-- idea santiago -->
+
+              <!-- <a
+                href="#"
+                class="list-group-item list-group-item-action active py-3 lh-tight"
+              >
+                <div
+                  class="d-flex w-100 align-items-center justify-content-between"
+                >
+                  <strong class="mb-1">List group item heading</strong>
+                  <small>Wed</small>
+                </div>
+                <div class="col-10 mb-1 small">
+                  Some placeholder content in a paragraph below the heading and
+                  date.
+                </div>
+              </a>
+              <a
+                href="#"
+                class="list-group-item list-group-item-action py-3 lh-tight"
+              >
+                <div
+                  class="d-flex w-100 align-items-center justify-content-between"
+                >
+                  <strong class="mb-1">List group item heading</strong>
+                  <small class="text-muted">Tues</small>
+                </div>
+                <div class="col-10 mb-1 small">
+                  Some placeholder content in a paragraph below the heading and
+                  date.
+                </div>
+              </a> -->
+            </div>
+            <div
+              tabindex="0"
+              class="h-100"
+              id="info"
+              data-bs-container="body"
+              data-bs-toggle="popover"
+              data-bs-placement="right"
+              data-bs-content="Right popover"
+              data-bs-html="true"
+            ></div>
+          </aside>
+        </div>
+        <main class="flex-fill overflow-auto">
+          <div id="map" class="h-100 w-100"></div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
